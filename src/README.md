@@ -9,19 +9,19 @@ To install and run the app locally, follow these steps:
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/Shuyi829/nyc-crime-data-visualization.git
+    git clone https://github.com/UOA-CS732-SE750-Students-2023/cs732-se75-assignment-Shuyi829.git
     ```
 
 2. Navigate into the project directory:
 
     ```bash
-    cd nyc-crime-data-visualization
+    cd cs732-se75-assignment-Shuyi829
     ```
 
 3. Install the required dependencies:
 
     ```bash
-    npm install d3 @types/d3
+    npm install
     ```
 
 4. Start the development server:

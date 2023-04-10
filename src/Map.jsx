@@ -47,6 +47,7 @@ const Map = () => {
     const pathGenerator = d3.geoPath().projection(projection);
 
     let centered;
+
     const svg = d3
       .select('#map')
       .append('svg')
@@ -175,8 +176,8 @@ const Map = () => {
           .attr('tot_cnt', function(d) {
             return data[d.properties.Precinct.toString()]['sum'];
           })
-          .attr('stroke', 'grey') //设置边线颜色
-          .attr('stroke-width', 0.75) //设置边线宽度
+          .attr('stroke', 'grey') 
+          .attr('stroke-width', 0.75)
           .style('fill', '#E13C19')
           .style('fill-opacity', function(d) {
             if (data.hasOwnProperty(d.properties.Precinct.toString())) {
@@ -213,12 +214,10 @@ const Map = () => {
             if (CRIME_TYPE == 'all') {
               update_age({ mode: 1, key: this.id });
               update_race({ mode: 1, key: this.id });
-              // update_sex({ mode: 1, key: this.id });
             } else {
               let key = [CRIME_TYPE, this.id];
               update_age({ mode: 3, key: this.id });
               update_race({ mode: 3, key: this.id });
-              // update_sex({ mode: 3, key: this.id });
             }
           })
           .on('mousemove', function() {
@@ -516,7 +515,6 @@ const Map = () => {
       reset_map();
       reset_pie_all();
       reset_age();
-      // reset_sex();
       reset_race();
     });
 
